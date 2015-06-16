@@ -6,20 +6,24 @@
     android:orientation="vertical" >
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/bank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
-
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="200px"
-        android:text="TextView" />
+        android:text="Bank" />
     <Button
-        android:id="@+id/button2"
-        android:layout_width="200px"
+        android:id="@+id/atm"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="ATM" />
+    <Button
+        android:id="@+id/restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restaurant" />
+    <Button
+        android:id="@+id/hospital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hospital" />
 
 </LinearLayout>

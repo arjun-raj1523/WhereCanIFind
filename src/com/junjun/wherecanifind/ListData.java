@@ -14,6 +14,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -24,13 +25,16 @@ public class ListData extends ListActivity{
 	final String GOOGLE_KEY = "AIzaSyBg0ADiTy7w76M0RAcu01fWEDCTU5_Pct8";
 	final String latitude = "18.4995573";
 	final String longtitude = "73.84399909999999";
+	String bankExtra = null;
 	ArrayAdapter<String> myAdapter;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		Intent intent = getIntent();
+		bankExtra = intent.getStringExtra("Value");
+		System.out.println("In ListData Activity"+bankExtra);
 		// start the AsyncTask that makes the call for the venus search.
 		new googleplaces().execute();
 	}
@@ -42,7 +46,7 @@ private class googleplaces extends AsyncTask<View, Void, String> {
 	@Override
 	protected String doInBackground(View... urls) {
 		// make Call to the url
-		temp = makeCall("https://maps.googleapis.com/maps/api/place/search/json?location=" + latitude + "," + longtitude + "&radius=1000&type=atm&sensor=true&key=" + GOOGLE_KEY);
+		temp = makeCall("https://maps.googleapis.com/maps/api/place/search/json?location=" + latitude + "," + longtitude + "&radius=1000&type="+bankExtra+"&sensor=true&key=" + GOOGLE_KEY);
 		return "";
 	}
 
