@@ -5,25 +5,44 @@
     android:background="#ffffff"
     android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Waiting..." />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:text="Waiting..." />
+
     <Button
         android:id="@+id/bank"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:text="Bank" />
     <Button
         android:id="@+id/atm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:text="ATM" />
     <Button
         android:id="@+id/restaurant"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:text="Restaurant" />
     <Button
         android:id="@+id/hospital"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#000000"
         android:text="Hospital" />
+
+
 
 </LinearLayout>

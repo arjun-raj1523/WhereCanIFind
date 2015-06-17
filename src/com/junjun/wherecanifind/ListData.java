@@ -23,9 +23,9 @@ import android.widget.ArrayAdapter;
 public class ListData extends ListActivity{
 	ArrayList<GooglePlace> venuesList;
 	final String GOOGLE_KEY = "AIzaSyBg0ADiTy7w76M0RAcu01fWEDCTU5_Pct8";
-	final String latitude = "18.4995573";
-	final String longtitude = "73.84399909999999";
 	String bankExtra = null;
+	String latExtra=null;
+	String longExtra=null;
 	ArrayAdapter<String> myAdapter;
 	
 	@Override
@@ -34,7 +34,9 @@ public class ListData extends ListActivity{
 		setContentView(R.layout.activity_main);
 		Intent intent = getIntent();
 		bankExtra = intent.getStringExtra("Value");
-		System.out.println("In ListData Activity"+bankExtra);
+		latExtra = intent.getStringExtra("Lat");
+		longExtra = intent.getStringExtra("Long");
+		System.out.println("In ListData Activity"+bankExtra+latExtra+longExtra);
 		// start the AsyncTask that makes the call for the venus search.
 		new googleplaces().execute();
 	}
@@ -46,7 +48,7 @@ private class googleplaces extends AsyncTask<View, Void, String> {
 	@Override
 	protected String doInBackground(View... urls) {
 		// make Call to the url
-		temp = makeCall("https://maps.googleapis.com/maps/api/place/search/json?location=" + latitude + "," + longtitude + "&radius=1000&type="+bankExtra+"&sensor=true&key=" + GOOGLE_KEY);
+		temp = makeCall("https://maps.googleapis.com/maps/api/place/search/json?location=" + latExtra + "," + longExtra + "&radius=1000&type="+bankExtra+"&sensor=true&key=" + GOOGLE_KEY);
 		return "";
 	}
 
