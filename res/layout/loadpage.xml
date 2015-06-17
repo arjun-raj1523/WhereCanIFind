@@ -42,7 +42,17 @@
         android:layout_height="wrap_content"
         android:textColor="#000000"
         android:text="Hospital" />
-
-
+    <Button
+        android:id="@+id/convenience_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Convenience Store" />
+    <Button
+        android:id="@+id/laundry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000000"
+        android:text="Laundry" />
 
 </LinearLayout>

@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class NearMe extends Activity implements LocationListener {
-	Button getLocationBank,getLocationAtm,getLocationRestaurant,getLocationHospital;
+	Button getLocationBank,getLocationAtm,getLocationRestaurant,getLocationHospital,getLocationCStore,getLocationLaundry;
 	LocationManager locationManager;
 	Geocoder geocoder;
 	TextView textOutLat,textOutLong;
@@ -103,6 +103,44 @@ public class NearMe extends Activity implements LocationListener {
 			@Override
 			public void onClick(View v) {
 				String buttonString = getLocationHospital.getText().toString().toLowerCase();
+				System.out.println("In NearME Activity"+buttonString);
+				intent = new Intent(v.getContext(),ListData.class);
+				intent.putExtra("Value",buttonString);
+				intent.putExtra("Lat",textOutLat.getText().toString());
+				intent.putExtra("Long",textOutLong.getText().toString());
+				startActivity(intent);
+				
+			}			
+	});
+		/*
+		 * For Departmental Store
+		 * */
+		getLocationCStore = (Button) findViewById(R.id.convenience_store);
+		
+		getLocationCStore.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				String buttonString = getLocationCStore.getText().toString().toLowerCase();
+				System.out.println("In NearME Activity"+buttonString);
+				intent = new Intent(v.getContext(),ListData.class);
+				intent.putExtra("Value","convenience_store");
+				intent.putExtra("Lat",textOutLat.getText().toString());
+				intent.putExtra("Long",textOutLong.getText().toString());
+				startActivity(intent);
+				
+			}			
+	});
+		/*
+		 * For Laundry
+		 * */
+		getLocationLaundry = (Button) findViewById(R.id.laundry);
+		
+		getLocationLaundry.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				String buttonString = getLocationLaundry.getText().toString().toLowerCase();
 				System.out.println("In NearME Activity"+buttonString);
 				intent = new Intent(v.getContext(),ListData.class);
 				intent.putExtra("Value",buttonString);

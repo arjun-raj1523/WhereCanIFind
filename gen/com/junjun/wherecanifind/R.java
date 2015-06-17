@@ -22,8 +22,10 @@ public final class R {
     public static final class id {
         public static final int atm=0x7f060003;
         public static final int bank=0x7f060002;
+        public static final int convenience_store=0x7f060006;
         public static final int hospital=0x7f060005;
-        public static final int listText=0x7f060006;
+        public static final int laundry=0x7f060007;
+        public static final int listText=0x7f060008;
         public static final int restaurant=0x7f060004;
         public static final int textView1=0x7f060000;
         public static final int textView2=0x7f060001;
