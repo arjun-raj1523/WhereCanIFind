@@ -5,54 +5,132 @@
     android:background="#ffffff"
     android:orientation="vertical" >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="0dp"
+        android:background="#0099CC"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/atm"
+            android:layout_width="50dp"
+            android:layout_height="80dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/setting"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
     <TextView
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:text="Waiting..." />
+        android:text="Waiting..."
+        android:textColor="#FFFFFF" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#FFFFFF"
-        android:text="Waiting..." />
+        android:text="Waiting..."
+        android:textColor="#FFFFFF" />
 
-    <Button
-        android:id="@+id/bank"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:text="Bank" />
-    <Button
-        android:id="@+id/atm"
+        android:layout_marginTop="-20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/bank"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/bank"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/atm"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/atm"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:text="ATM" />
-    <Button
-        android:id="@+id/restaurant"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/restaurant"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/restaurant"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/hospital"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/hospital"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:text="Restaurant" />
-    <Button
-        android:id="@+id/hospital"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/convenience_store"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/shopping_cart"
+            android:textColor="#000000" />
+
+        <Button
+            android:id="@+id/laundry"
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:background="@drawable/laundry"
+            android:textColor="#000000" />
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:text="Hospital" />
-    <Button
-        android:id="@+id/convenience_store"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:text="Convenience Store" />
-    <Button
-        android:id="@+id/laundry"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="#000000"
-        android:text="Laundry" />
+        android:layout_marginTop="50dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Set Radius for search, by default 100m"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#000000" />
+            <SeekBar
+                android:id="@+id/radiusBar"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp" />
+    </RelativeLayout>
 
 </LinearLayout>

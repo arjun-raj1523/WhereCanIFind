@@ -45,10 +45,8 @@ public class NearMe extends Activity implements LocationListener {
 
 			@Override
 			public void onClick(View v) {
-				String buttonString = getLocationBank.getText().toString().toLowerCase();
-				System.out.println("In NearME Activity"+buttonString);
 				intent = new Intent(v.getContext(),ListData.class);
-				intent.putExtra("Value",buttonString);
+				intent.putExtra("Value","bank");
 				intent.putExtra("Lat",textOutLat.getText().toString());
 				intent.putExtra("Long",textOutLong.getText().toString());
 				startActivity(intent);
@@ -64,10 +62,8 @@ public class NearMe extends Activity implements LocationListener {
 
 			@Override
 			public void onClick(View v) {
-				String buttonString = getLocationAtm.getText().toString().toLowerCase();
-				System.out.println("In NearME Activity"+buttonString);
 				intent = new Intent(v.getContext(),ListData.class);
-				intent.putExtra("Value",buttonString);
+				intent.putExtra("Value","atm");
 				intent.putExtra("Lat",textOutLat.getText().toString());
 				intent.putExtra("Long",textOutLong.getText().toString());
 				startActivity(intent);
@@ -83,10 +79,8 @@ public class NearMe extends Activity implements LocationListener {
 
 			@Override
 			public void onClick(View v) {
-				String buttonString = getLocationRestaurant.getText().toString().toLowerCase();
-				System.out.println("In NearME Activity"+buttonString);
 				intent = new Intent(v.getContext(),ListData.class);
-				intent.putExtra("Value",buttonString);
+				intent.putExtra("Value","restaurant");
 				intent.putExtra("Lat",textOutLat.getText().toString());
 				intent.putExtra("Long",textOutLong.getText().toString());
 				startActivity(intent);
@@ -102,10 +96,8 @@ public class NearMe extends Activity implements LocationListener {
 
 			@Override
 			public void onClick(View v) {
-				String buttonString = getLocationHospital.getText().toString().toLowerCase();
-				System.out.println("In NearME Activity"+buttonString);
 				intent = new Intent(v.getContext(),ListData.class);
-				intent.putExtra("Value",buttonString);
+				intent.putExtra("Value","hospital");
 				intent.putExtra("Lat",textOutLat.getText().toString());
 				intent.putExtra("Long",textOutLong.getText().toString());
 				startActivity(intent);
@@ -121,8 +113,6 @@ public class NearMe extends Activity implements LocationListener {
 
 			@Override
 			public void onClick(View v) {
-				String buttonString = getLocationCStore.getText().toString().toLowerCase();
-				System.out.println("In NearME Activity"+buttonString);
 				intent = new Intent(v.getContext(),ListData.class);
 				intent.putExtra("Value","convenience_store");
 				intent.putExtra("Lat",textOutLat.getText().toString());
@@ -139,11 +129,9 @@ public class NearMe extends Activity implements LocationListener {
 		getLocationLaundry.setOnClickListener(new OnClickListener(){
 
 			@Override
-			public void onClick(View v) {
-				String buttonString = getLocationLaundry.getText().toString().toLowerCase();
-				System.out.println("In NearME Activity"+buttonString);
+			public void onClick(View v) {;
 				intent = new Intent(v.getContext(),ListData.class);
-				intent.putExtra("Value",buttonString);
+				intent.putExtra("Value","laundry");
 				intent.putExtra("Lat",textOutLat.getText().toString());
 				intent.putExtra("Long",textOutLong.getText().toString());
 				startActivity(intent);
