@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
+
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -11,14 +12,15 @@
         android:layout_marginTop="0dp"
         android:background="#0099CC"
         android:orientation="horizontal" >
-
+ <!--Add settings Later
         <Button
-            android:id="@+id/atm"
+            android:id="@+id/setting"
             android:layout_width="50dp"
             android:layout_height="80dp"
             android:layout_alignParentRight="true"
             android:background="@drawable/setting"
             android:textColor="#000000" />
+            -->
     </RelativeLayout>
 
     <TextView
@@ -110,27 +112,5 @@
             android:textColor="#000000" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Set Radius for search, by default 100m"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#000000" />
-            <SeekBar
-                android:id="@+id/radiusBar"
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="50dp" />
-    </RelativeLayout>
 
 </LinearLayout>
